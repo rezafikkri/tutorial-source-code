@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding-top: 70px;
+}
+
+div.radio-custom {
+	position: relative;
+	padding-left: 22px;
+
+	/*style untuk membuat posisi radio custom-nya ke-tengah dari lebar browser*/
+	width: 180px;
+	margin: 15px auto;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	background-color: #fcfcfc;
+	border: 1px solid #c4c4c4;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+
+	/*style untuk lingkaran putih kecil didalam input radio*/
+	font-size: 19pt;
+	line-height: 16px;
+	color: white;
+	text-align: center;
+}
+
+input[type="radio"]:checked + label::before {
+	content: "\2022";
+}
+
+input.blue[type="radio"]:checked + label::before {
+	background-color: #0069d9;
+	border-color: #0069d9;
+}
+
+input.green[type="radio"]:checked + label::before {
+	background-color: #11c90e;
+	border-color: #11c90e;
+}

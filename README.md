@@ -1,2 +1,2 @@
 # tutorial-source-code
-Tempat menyimpan source dari tutorial
+Tempat menyimpan source code dari tutorial

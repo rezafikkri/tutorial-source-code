@@ -4,15 +4,23 @@
 
 body {
 	padding-top: 70px;
+	background-color: #f2e3a7
+}
+
+div.container {
+	background-color: white;
+	width: 380px;
+	padding: 20px;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 0 3px 12px rgba(0,0,0,.1);
 }
 
 div.radio-custom {
 	position: relative;
 	padding-left: 22px;
 
-	/*style untuk membuat posisi radio custom-nya ke-tengah dari lebar browser*/
-	width: 180px;
-	margin: 15px auto;
+	margin: 15px 0px;
 }
 
 input[type="radio"] {
@@ -28,16 +36,13 @@ input[type="radio"] + label::before {
 	width: 15px;
 	height: 15px;
 	border-radius: 15px;
-
-	/*style untuk lingkaran putih kecil didalam input radio*/
-	font-size: 19pt;
-	line-height: 16px;
-	color: white;
-	text-align: center;
 }
 
 input[type="radio"]:checked + label::before {
-	content: "\2022";
+	background-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="%23fff" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8"/></svg>');
+	background-repeat: no-repeat;
+  	background-size: 7px 7px;
+  	background-position: center;
 }
 
 input.blue[type="radio"]:checked + label::before {

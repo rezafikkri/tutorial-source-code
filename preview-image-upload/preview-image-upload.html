@@ -6,13 +6,35 @@
 	<!-- required meta tag -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #a3ecf7;
+		}
+
+		div.container {
+			background-color: white;
+			border-radius: 4px;
+			padding: 30px;
+			width: 700px;
+			margin: 70px auto;
+			box-shadow: 0 3px 12px rgba(0,0,0,.1);
+		}
+
+		img {
+			border: 1px solid #ddd;
+		}
+	</style>
 </head>
 <body>
 
-<center>
+<div class="container">
 	<input type="file" name="image"><br><br>
-	<img class="preview" width="300">
-</center>
+	<img class="preview" width="640">
+</div>
 
 <script type="text/javascript">
 	const inputFile = document.querySelector('input[name="image"]');

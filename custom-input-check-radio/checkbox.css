@@ -4,13 +4,14 @@
 
 body {
 	padding-top: 70px;
+	background-color: #f2e3a7
 }
 
 div.container {
 	background-color: white;
 	width: 380px;
 	padding: 20px;
-	margin: auto;
+	margin: 120px auto;
 	border-radius: 10px;
 	box-shadow: 0 3px 12px rgba(0,0,0,.1);
 }

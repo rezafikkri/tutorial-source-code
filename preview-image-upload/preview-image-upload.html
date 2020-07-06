@@ -6,21 +6,28 @@
 	<!-- required meta tag -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- style -->
-	<link rel="stylesheet" type="text/css" href="preview.css">
 </head>
 <body>
 
 <center>
-	<input type="file" name="image">
-	<img class="preview" width="200">
+	<input type="file" name="image"><br><br>
+	<img class="preview" width="300">
 </center>
 
 <script type="text/javascript">
-	const image = document.querySelector('input[name="image"]');
-	image.addEventListener("change", (e)=> {
-		document.querySelector("img.preview").src = URL.createObjectURL(e.target.files[0]);
+	const inputFile = document.querySelector('input[name="image"]');
+	inputFile.addEventListener("change", (e)=> {
+		// membuat string object url dari object files
+		const url = URL.createObjectURL(e.target.files[0]);
+		const img = document.querySelector("img.preview");
+		img.src = url;
+
+		// membersihkan string object url pada memory yang sebelumnya dibuat pada saat memanggil fungsi URL.createObjectURL()
+		/// Jika image selesai diload
+		img.onload = function(){
+			URL.revokeObjectURL(this.src);
+		}
+		
 	});
 </script>
 

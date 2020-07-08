@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #efe4ae;
+}
+
+.container {
+	width: 500px;
+	padding: 30px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 3px 12px rgba(0,0,0,.1);
+}
+
+.custom-input-file {
+	height: 49px;
+	position: relative;
+}
+
+input[type="file"] {
+	display: none;
+	position: absolute;
+}
+
+input[type="file"] + label {
+	border: 1px solid #ddd;
+	width: 100%;
+	padding: 14px 16px;
+	position: absolute;
+	border-radius: 4px;
+	color: #333;
+}
+
+input[type="file"] + label:hover {
+	cursor: pointer;
+}
